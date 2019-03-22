@@ -42,5 +42,5 @@ setup(
         "SQLAlchemy",
         "singledispatch>=3.4.0.3",
     ],
-    tests_require=["pytest>=2.7.2", "mock", "sqlalchemy_utils"],
+    tests_require=["pytest>=2.7.2", "mock", "sqlalchemy_utils", "enum34"],
 )
