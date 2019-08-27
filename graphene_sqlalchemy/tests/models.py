@@ -8,7 +8,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.ext.hybrid import hybrid_property
 from sqlalchemy.orm import column_property, composite, mapper, relationship
 
-PetKind = Enum("cat", "dog", name="pet_kind")
+PetKind = Enum("cat", "dog", "invalid value", name="pet_kind")
 
 
 class HairKind(enum.Enum):

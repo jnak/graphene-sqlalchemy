@@ -12,6 +12,7 @@ def test_query_pet_kinds(session):
 
         class Meta:
             model = Pet
+            exclude_fields = ('pet_kind',)
 
     class ReporterType(SQLAlchemyObjectType):
         class Meta:
@@ -92,6 +93,7 @@ def test_query_more_enums(session):
     class PetType(SQLAlchemyObjectType):
         class Meta:
             model = Pet
+            exclude_fields = ('pet_kind',)
 
     class Query(graphene.ObjectType):
         pet = graphene.Field(PetType)
@@ -122,6 +124,7 @@ def test_enum_as_argument(session):
     class PetType(SQLAlchemyObjectType):
         class Meta:
             model = Pet
+            exclude_fields = ('pet_kind',)
 
     class Query(graphene.ObjectType):
         pet = graphene.Field(
@@ -162,6 +165,7 @@ def test_py_enum_as_argument(session):
     class PetType(SQLAlchemyObjectType):
         class Meta:
             model = Pet
+            exclude_fields = ('pet_kind',)
 
     class Query(graphene.ObjectType):
         pet = graphene.Field(
